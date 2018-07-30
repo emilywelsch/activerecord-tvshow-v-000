@@ -1,5 +1,9 @@
 require_relative 'config/environment.rb'
 
+task :console
+  Pry.start
+end
+
 namespace :db do
 
   desc "Migrate the db"
