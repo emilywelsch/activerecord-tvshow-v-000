@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-  def highest_rating #this method should return the highest value in the ratings column.
+  def highest_rating
     Show.maximum(:rating)
   end
 
