@@ -6,7 +6,7 @@ end
 
 task :console
   Pry.start
-end
+# end
 
 namespace :db do
 
