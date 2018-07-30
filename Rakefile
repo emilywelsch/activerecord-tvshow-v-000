@@ -4,8 +4,11 @@ def reload!
   load_all './lib'
 end
 
-task :console
+# Type `rake -T` on your command line to see the available rake tasks.
+
+task :console do
   Pry.start
+end
 
 namespace :db do
 
