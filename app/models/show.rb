@@ -13,15 +13,15 @@ class Show < ActiveRecord::Base
     Show.find_by(rating:10).name
   end
 
-  def lowest_rating #returns the lowest value in the ratings column.
+  def lowest_rating
     Show.minimum(:rating)
   end
 
-  def least_popular_show #returns the show with the lowest rating.
+  def least_popular_show
     Show.find_by(rating:2).name
   end
 
-  def ratings_sum #returns the sum of all of the ratings.
+  def ratings_sum
     Show.sum(:rating)
   end
 
@@ -29,7 +29,7 @@ class Show < ActiveRecord::Base
     Show.where("rating > ?", 5)
   end
 
-  def shows_by_alphabetical_order #returns an array of all of the shows sorted by alphabetical order according to their names.
+  def shows_by_alphabetical_order
     Show.order(:name)
   end
 end
