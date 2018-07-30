@@ -1,6 +1,6 @@
 class Show < ActiveRecord::Base
   def highest_rating #this method should return the highest value in the ratings column.
-    Show.maximum("rating")
+    Show.maximum(:rating)
   end
 
   def most_popular_show #this method should return the show with the highest rating. hint: use the highest_rating method as a helper method.
@@ -19,5 +19,5 @@ class Show < ActiveRecord::Base
   end
 
   def shows_by_alphabetical_order #returns an array of all of the shows sorted by alphabetical order according to their names. hint: use the order Active Record method.
-  end  
+  end
 end
