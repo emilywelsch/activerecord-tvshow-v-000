@@ -5,14 +5,13 @@ class Show < ActiveRecord::Base
   # @the_cleveland_show = Show.create(:name => "The Cleveland Show", :day => "Monday", :network => "Fox", :rating => 2)
   # @fear_the_walking_dead = Show.create(:name => "Fear the Walking Dead", :day => "Sunday", :network => "AMC", :rating => 3)
 
-
   def highest_rating
     Show.maximum(:rating)
   end
 
   def most_popular_show #this method should return the show with the highest rating. hint: use the highest_rating method as a helper method.
     Show.find_by(rating:10).name
-    Show.find_by(rating: Show.highest_rating).name
+    Show.find_by Show.highest_rating.name
 
   end
 
